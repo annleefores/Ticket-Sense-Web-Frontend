@@ -59,7 +59,7 @@ const Index = () => {
   };
 
   return (
-    <div className="flex justify-center mt-[100px] w-full h-full">
+    <div className="flex justify-center mt-[80px] w-full h-full">
       <div className="flex flex-col w-full max-w-[700px] gap-1">
         <SlideControl />
         <MovieSearch setMovie={setMovie} movie={movie} />
