@@ -24,6 +24,7 @@ const Index = () => {
     setTheater,
     setTheaterdata,
     setNewpost,
+    user,
   } = useContextStore();
 
   const [movie, setMovie] = useState("");
@@ -44,8 +45,7 @@ const Index = () => {
         film: movie,
         location: loc,
         theater: thea,
-        // tg_user_id: user_data,
-        tg_user_id: "378882317",
+        tg_user_id: user,
       })
       .then((response) => {
         if (response.data.message === "success") {

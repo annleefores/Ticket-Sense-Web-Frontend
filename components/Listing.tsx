@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TrashX } from "tabler-icons-react";
 import dayjs from "dayjs";
 import no_image from "../assets/image/no_image.png";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useContextStore } from "../context/AuthContext";
 
 const Listing = () => {
-  const { newpost } = useContextStore();
+  const { newpost, session } = useContextStore();
 
   const [mainData, setmainData] = useState([]);
 
@@ -15,19 +15,17 @@ const Listing = () => {
 
   const [buttonValue, setButtonValue] = useState("all");
 
-  //   const [user_data, setUser_data] = useState(sessionStorage.getItem("user"));
-
-  const user_data = "378882317";
-
   const getData = async () => {
-    axios
-      .get(`${process.env.NEXT_PUBLIC_API_URI}api/getdata/${user_data}/`)
-      .then((response) => {
-        const data = response.data.map((item: any, id: number) => item);
-        setmainData(data);
-        setdisplayData(data);
-        setButtonValue("all");
-      });
+    if (session) {
+      axios
+        .get(`${process.env.NEXT_PUBLIC_API_URI}api/getdata/${session}/`)
+        .then((response) => {
+          const data = response.data.map((item: any, id: number) => item);
+          setmainData(data);
+          setdisplayData(data);
+          setButtonValue("all");
+        });
+    }
   };
 
   const filterType = (site: string) => {
@@ -51,7 +49,7 @@ const Listing = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [session]);
 
   const deleteShow = (id: any) => {
     axios
