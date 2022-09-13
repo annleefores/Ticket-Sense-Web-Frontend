@@ -4,10 +4,22 @@ import jsonp from "jsonp";
 import axios from "axios";
 import { useContextStore } from "../context/AuthContext";
 
-const SlideControl = ({ LocDataFunc }: { LocDataFunc: any }) => {
-  const { site, setSite } = useContextStore();
+const SlideControl = () => {
+  const {
+    site,
+    setSite,
+    setLocdata,
+    dateChange,
+    setLocation,
+    setTheater,
+    setTheaterdata,
+  } = useContextStore();
 
   useEffect(() => {
+    dateChange(null);
+    setLocation([]);
+    setTheater([]);
+    setTheaterdata([{ value: "", label: "" }]);
     if (site === "bms") {
       bms_sense();
     } else if (site === "tk") {
@@ -39,7 +51,7 @@ const SlideControl = ({ LocDataFunc }: { LocDataFunc: any }) => {
             });
           }
         );
-        LocDataFunc(location_data);
+        setLocdata(location_data);
       });
   };
 
@@ -59,7 +71,7 @@ const SlideControl = ({ LocDataFunc }: { LocDataFunc: any }) => {
               value: `{"name": "${item.name}", "location_code": "${item.id}"}`,
             })
           );
-          LocDataFunc(location_data);
+          setLocdata(location_data);
         }
       }
     );

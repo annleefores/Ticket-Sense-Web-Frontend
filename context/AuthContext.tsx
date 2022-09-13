@@ -20,6 +20,8 @@ interface authContextType {
   setTheaterdata: any;
   date: any;
   dateChange: any;
+  moviedata: any;
+  setMoviedata: any;
 }
 
 const authContextDefaultValues: authContextType = {
@@ -37,6 +39,8 @@ const authContextDefaultValues: authContextType = {
   setTheaterdata: () => {},
   date: null,
   dateChange: () => {},
+  moviedata: "",
+  setMoviedata: () => {},
 };
 
 const AuthContext = createContext(authContextDefaultValues);
@@ -46,6 +50,7 @@ export function useContextStore() {
 }
 
 export function AuthProvider({ children }: Props) {
+  const [moviedata, setMoviedata] = useState([]);
   const [user, setUser] = useState("");
   const [site, setSite] = useState("");
   const [Locdata, setLocdata] = useState([]);
@@ -73,6 +78,8 @@ export function AuthProvider({ children }: Props) {
     setTheaterdata,
     date,
     dateChange,
+    moviedata,
+    setMoviedata,
   };
 
   return (

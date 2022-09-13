@@ -3,11 +3,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { Movie } from "tabler-icons-react";
 import dayjs from "dayjs";
 import axios from "axios";
+import { useContextStore } from "../context/AuthContext";
 
 const MovieSearch = ({ setMovie, movie }: { setMovie: any; movie: string }) => {
   const TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 
-  const [moviedata, setMoviedata] = useState([]);
+  const { setMoviedata, moviedata } = useContextStore();
 
   useEffect(() => {
     if (movie.length > 1) {
