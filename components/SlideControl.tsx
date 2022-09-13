@@ -2,17 +2,22 @@ import React, { useEffect, SetStateAction, useState, Dispatch } from "react";
 import { SegmentedControl } from "@mantine/core";
 import jsonp from "jsonp";
 import axios from "axios";
+import { useContextStore } from "../context/AuthContext";
 
 const SlideControl = ({ LocDataFunc }: { LocDataFunc: any }) => {
-  const [site, setSite] = useState("bms");
+  const { site, setSite } = useContextStore();
 
   useEffect(() => {
     if (site === "bms") {
       bms_sense();
-    } else {
+    } else if (site === "tk") {
       tk_sense();
     }
   }, [site]);
+
+  useEffect(() => {
+    setSite("bms");
+  }, []);
 
   const bms_sense = async () => {
     axios
