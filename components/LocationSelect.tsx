@@ -22,9 +22,7 @@ const LocationSelect = () => {
       const loc = JSON.parse(location).location_code;
       if (loc.length > 1) {
         axios
-          .get(
-            `${process.env.NEXT_PUBLIC_FRONTEND_API_URI}/api/bms-theater/${loc}`
-          )
+          .get(`${process.env.NEXT_PUBLIC_FRONTEND_API_URI}/api/bms/${loc}`)
           .then((response) => {
             const theatre_data = response.data.BookMyShow.arrVenue.map(
               (item: { VenueName: string; VenueCode: string }, id: number) => ({
