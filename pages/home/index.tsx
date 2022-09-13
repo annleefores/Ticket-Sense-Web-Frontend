@@ -31,11 +31,12 @@ const Index = () => {
   // convert output from calendar to date format
   const dateFormat = dayjs(date).format("YYYY-MM-DD");
 
-  const log = async () => {
+  const log = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
     setNewpost(false);
+
     const loc = JSON.parse(location);
     const thea = JSON.parse(theater);
-
     axios
       .post(`${process.env.NEXT_PUBLIC_API_URI}api/trigger/`, {
         site: site,
@@ -64,19 +65,18 @@ const Index = () => {
     <div className="flex flex-col mt-[80px] w-full h-full">
       <div className="flex justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full max-w-[700px] gap-1">
-          <SlideControl />
-          <MovieSearch setMovie={setMovie} movie={movie} />
-          <LocationSelect />
-          <TheatreSelect />
-          <DatePickerSelect />
-          <div className="flex justify-center items-center">
-            <button
-              onClick={log}
-              className=" bg-[#00df9a] text-black rounded-md shadow-lg font-medium m-4 mt-8 p-3 w-[200px]"
-            >
-              Enable Ticket Sense
-            </button>
-          </div>
+          <form className="w-full h-full" onSubmit={log}>
+            <SlideControl />
+            <MovieSearch setMovie={setMovie} movie={movie} />
+            <LocationSelect />
+            <TheatreSelect />
+            <DatePickerSelect />
+            <div className="flex justify-center items-center">
+              <button className=" bg-[#00df9a] text-black rounded-md shadow-lg font-medium m-4 mt-8 p-3 w-[200px]">
+                Enable Ticket Sense
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <div className="h-full w-full">
