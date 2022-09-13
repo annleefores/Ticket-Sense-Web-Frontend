@@ -1,47 +1,37 @@
 import axios from "axios";
 import { createContext, ReactNode, useContext, useState } from "react";
 
+type Props = {
+  children: ReactNode;
+};
+
 interface authContextType {
   user: string;
-  site: string;
-  setUserFunc: () => void;
-  setSiteFunc: () => void;
+  setUserFunc: any;
 }
 
 const authContextDefaultValues: authContextType = {
   user: "",
-  site: "",
+
   setUserFunc: () => {},
-  setSiteFunc: () => {},
 };
 
-const AuthContext = createContext<authContextType>();
+const AuthContext = createContext(authContextDefaultValues);
 
 export function useContextStore() {
   return useContext(AuthContext);
 }
 
-type Props = {
-  children: ReactNode;
-};
-
 export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState("");
-  const [site, setSite] = useState("");
 
-  const setUserFunc = async ({ params }: { params: string }) => {
+  const setUserFunc = async (params: string) => {
     setUser(params);
-  };
-
-  const setSiteFunc = async ({ params }: { params: string }) => {
-    setSite(params);
   };
 
   const value = {
     user,
     setUserFunc,
-    site,
-    setSiteFunc,
   };
 
   return (
