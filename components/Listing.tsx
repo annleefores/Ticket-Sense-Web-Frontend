@@ -105,7 +105,7 @@ const Listing = () => {
         {displayData.map((item: any, index: number) => (
           <div
             key={index}
-            className="shadow-lg relative rounded hover:scale-105 duration-300 w-full h-full"
+            className="shadow-lg relative rounded hover:scale-105 duration-500 w-full h-full"
           >
             <Image
               src={
