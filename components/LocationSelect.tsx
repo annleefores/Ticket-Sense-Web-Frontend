@@ -67,7 +67,7 @@ const LocationSelect = () => {
     }
   };
   return (
-    <div className="flex w-full h-full justify-center">
+    <div className="flex w-full h-full justify-center ">
       <Select
         className="w-full px-2 m-2 sm:w-2/3"
         placeholder="Location"

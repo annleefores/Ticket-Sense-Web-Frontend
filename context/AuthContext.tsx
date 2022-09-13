@@ -22,6 +22,8 @@ interface authContextType {
   dateChange: any;
   moviedata: any;
   setMoviedata: any;
+  newpost: boolean;
+  setNewpost: any;
 }
 
 const authContextDefaultValues: authContextType = {
@@ -41,6 +43,8 @@ const authContextDefaultValues: authContextType = {
   dateChange: () => {},
   moviedata: "",
   setMoviedata: () => {},
+  newpost: false,
+  setNewpost: () => {},
 };
 
 const AuthContext = createContext(authContextDefaultValues);
@@ -58,6 +62,7 @@ export function AuthProvider({ children }: Props) {
   const [theater, setTheater] = useState([]);
   const [theaterdata, setTheaterdata] = useState([{ value: "", label: "" }]);
   const [date, dateChange] = useState(null);
+  const [newpost, setNewpost] = useState(false);
 
   const setUserFunc = async (params: string) => {
     setUser(params);
@@ -80,6 +85,8 @@ export function AuthProvider({ children }: Props) {
     dateChange,
     moviedata,
     setMoviedata,
+    newpost,
+    setNewpost,
   };
 
   return (
