@@ -47,8 +47,8 @@ const Home: NextPage = () => {
           Get notified about ticket sales at your preferred theater before
           anyone else.
         </p>
-        <div className="mt-[60px]">
-          <div className="flex justify-center">
+        <div className="flex justify-center items-center  w-full h-[50px] mt-[60px]">
+          <div className="flex ">
             <TelegramLoginButton
               dataOnauth={handleTelegramResponse}
               botName="ticketsense_bot"

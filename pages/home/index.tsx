@@ -1,7 +1,8 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 import DatePickerSelect from "../../components/DatePickerSelect";
 import Listing from "../../components/Listing";
 import LocationSelect from "../../components/LocationSelect";
@@ -24,10 +25,16 @@ const Index = () => {
     setTheater,
     setTheaterdata,
     setNewpost,
-    user,
+    session,
   } = useContextStore();
 
+  const router = useRouter();
+
   const [movie, setMovie] = useState("");
+
+  if (!session) {
+    return <div>Loading...</div>;
+  }
 
   // convert output from calendar to date format
   const dateFormat = dayjs(date).format("YYYY-MM-DD");
@@ -35,7 +42,6 @@ const Index = () => {
   const log = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setNewpost(false);
-
     const loc = JSON.parse(location);
     const thea = JSON.parse(theater);
     axios
@@ -45,7 +51,7 @@ const Index = () => {
         film: movie,
         location: loc,
         theater: thea,
-        tg_user_id: user,
+        tg_user_id: session,
       })
       .then((response) => {
         if (response.data.message === "success") {
@@ -62,7 +68,7 @@ const Index = () => {
   };
 
   return (
-    <div className="flex flex-col mt-[80px] w-full h-full">
+    <div className="flex flex-col mt-[70px] w-full h-full">
       <div className="flex justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full max-w-[700px] gap-1">
           <form className="w-full h-full" onSubmit={log}>

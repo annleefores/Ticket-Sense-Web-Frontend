@@ -60,7 +60,7 @@ const Listing = () => {
   };
 
   return (
-    <div className="max-w-[1640px] mt-6 m-auto px-4 py-12">
+    <div className="max-w-[1640px] mt-4 m-auto px-4 py-8">
       <p className="font-bold text-xl m-2 flex justify-center md:justify-start ">
         Added Notifications
       </p>

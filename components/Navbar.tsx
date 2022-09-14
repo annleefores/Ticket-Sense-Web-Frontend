@@ -17,12 +17,9 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <div className="flex flex-row uppercase mr-5 md:mr-8">
+        <div className="flex uppercase mr-5 md:mr-8">
           <p className="p-2 md:p-4 cursor-pointer text-sm md:text-lg font-semibold">
             DOCS
-          </p>
-          <p className="p-2 md:p-4 cursor-pointer text-sm md:text-lg font-semibold">
-            Contact
           </p>
         </div>
       </div>
