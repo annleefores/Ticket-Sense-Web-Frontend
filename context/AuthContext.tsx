@@ -30,9 +30,7 @@ interface authContextType {
   setMoviedata: any;
   newpost: boolean;
   setNewpost: any;
-
-  movie: any;
-  setMovie: any;
+  session: any;
 }
 
 const authContextDefaultValues: authContextType = {
@@ -54,9 +52,7 @@ const authContextDefaultValues: authContextType = {
   setMoviedata: () => {},
   newpost: false,
   setNewpost: () => {},
-
-  movie: "",
-  setMovie: () => {},
+  session: "",
 };
 
 const AuthContext = createContext(authContextDefaultValues);
@@ -66,7 +62,6 @@ export function useContextStore() {
 }
 
 export function AuthProvider({ children }: Props) {
-  const [movie, setMovie] = useState("");
   const [moviedata, setMoviedata] = useState([]);
   const [user, setUser] = useState("");
   const [site, setSite] = useState("");
@@ -76,6 +71,10 @@ export function AuthProvider({ children }: Props) {
   const [theaterdata, setTheaterdata] = useState([{ value: "", label: "" }]);
   const [date, dateChange] = useState(null);
   const [newpost, setNewpost] = useState(false);
+  const [session, setSession] = useSessionStorage({
+    key: "user",
+    defaultValue: "",
+  });
 
   const setUserFunc = async (params: any) => {
     setUser(params);
@@ -83,12 +82,9 @@ export function AuthProvider({ children }: Props) {
 
   useEffect(() => {
     if (user) {
-      sessionStorage.setItem("user", user);
-    } else if (!user) {
-      const userSession = sessionStorage.getItem("user");
-      setUserFunc(userSession);
+      setSession(user);
     }
-  }, []);
+  }, [user]);
 
   const value = {
     user,
@@ -109,8 +105,7 @@ export function AuthProvider({ children }: Props) {
     setMoviedata,
     newpost,
     setNewpost,
-    movie,
-    setMovie,
+    session,
   };
 
   return (

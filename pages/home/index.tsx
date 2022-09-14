@@ -2,7 +2,7 @@ import axios from "axios";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { useRouter } from "next/router";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DatePickerSelect from "../../components/DatePickerSelect";
 import Listing from "../../components/Listing";
 import LoaderComponent from "../../components/LoaderComponent";
@@ -27,24 +27,20 @@ const Index = () => {
     setTheater,
     setTheaterdata,
     setNewpost,
-    movie,
-    setMovie,
-    user,
+    session,
   } = useContextStore();
 
   const router = useRouter();
 
+  const [movie, setMovie] = useState("");
+
   useEffect(() => {
-    if (!sessionStorage.getItem("user")) {
-      handleClick();
+    if (!session) {
+      router.push("/");
     }
-  }, [user]);
+  }, []);
 
-  const handleClick = async () => {
-    router.push("/");
-  };
-
-  if (!user) {
+  if (!session) {
     return (
       <div>
         <LoaderComponent />
@@ -67,7 +63,7 @@ const Index = () => {
         film: movie,
         location: loc,
         theater: thea,
-        tg_user_id: user,
+        tg_user_id: session,
       })
       .then((response) => {
         if (response.data.message === "success") {
