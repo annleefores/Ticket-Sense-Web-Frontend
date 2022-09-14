@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 
 const Home: NextPage = () => {
-  const { user, setUserFunc } = useContextStore();
+  const { setUserFunc } = useContextStore();
 
   const router = useRouter();
 

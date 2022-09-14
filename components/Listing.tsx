@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useContextStore } from "../context/AuthContext";
 
 const Listing = () => {
-  const { newpost, session } = useContextStore();
+  const { newpost, user } = useContextStore();
 
   const [mainData, setmainData] = useState([]);
 
@@ -16,9 +16,9 @@ const Listing = () => {
   const [buttonValue, setButtonValue] = useState("all");
 
   const getData = async () => {
-    if (session) {
+    if (user) {
       axios
-        .get(`${process.env.NEXT_PUBLIC_API_URI}api/getdata/${session}/`)
+        .get(`${process.env.NEXT_PUBLIC_API_URI}api/getdata/${user}/`)
         .then((response) => {
           const data = response.data.map((item: any, id: number) => item);
           setmainData(data);
@@ -49,7 +49,7 @@ const Listing = () => {
 
   useEffect(() => {
     getData();
-  }, [session]);
+  }, [user]);
 
   const deleteShow = (id: any) => {
     axios
