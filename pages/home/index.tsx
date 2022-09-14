@@ -42,7 +42,6 @@ const Index = () => {
 
   useEffect(() => {
     if (!user && !loading) {
-      console.log("in", user);
       router.push("/");
     }
   }, [user, loading]);
