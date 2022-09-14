@@ -27,20 +27,27 @@ const Index = () => {
     setTheater,
     setTheaterdata,
     setNewpost,
-    session,
+    user,
   } = useContextStore();
 
   const router = useRouter();
 
   const [movie, setMovie] = useState("");
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    if (!session) {
-      router.push("/");
-    }
+    setLoading(false);
   }, []);
 
-  if (!session) {
+  useEffect(() => {
+    if (!user && !loading) {
+      console.log("in", user);
+      router.push("/");
+    }
+  }, [user, loading]);
+
+  if (!user) {
     return (
       <div>
         <LoaderComponent />
@@ -63,7 +70,7 @@ const Index = () => {
         film: movie,
         location: loc,
         theater: thea,
-        tg_user_id: session,
+        tg_user_id: user,
       })
       .then((response) => {
         if (response.data.message === "success") {
