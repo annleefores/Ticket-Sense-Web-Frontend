@@ -6,7 +6,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <div>
-      <div className="flex flex-row justify-between items-center mt-2 ml-5">
+      <div className="flex flex-row justify-between items-center mt-4 ml-5">
         <div>
           <Link href="/">
             <a className="flex flex-row items-center">

@@ -6,6 +6,7 @@ import TelegramLoginButton from "react-telegram-login";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
+import About from "../components/About";
 
 const Home: NextPage = () => {
   const { user, setUserFunc } = useContextStore();
@@ -42,16 +43,19 @@ const Home: NextPage = () => {
       <Navbar />
 
       <div className="text-white">
-        <div className="max-w-[860px] mt-[-160px] w-full h-screen mx-auto text-center flex flex-col justify-center">
-          <h1 className=" text-[#00df9a] text-5xl mt-[45px] font-bold flex justify-center p-2 md:text-6xl sm:text-5xl md:py-6">
+        <div className="max-w-[860px]  mt-[100px] w-full h-full mx-auto text-center flex flex-col justify-center ">
+          <h1 className="text-6xl text-emerald-500 mt-[45px] font-semibold  flex justify-center p-2 md:text-[80px]  md:py-6">
             Ticket Sense
           </h1>
 
-          <p className="md:text-2xl text-[1rem] font-bold mt-3 text-gray-400">
+          <p className="md:text-2xl text-lg font-semibold  mt-2 text-neutral-400 p-2">
             Get notified about ticket sales at your preferred theater before
             anyone else.
           </p>
-          <div className="flex justify-center items-center  w-full h-[50px] mt-[60px]">
+          {/* <p className="text-neutral-400">
+            
+          </p> */}
+          <div className="flex justify-center items-center w-full h-[50px] mt-[60px]">
             <div className="flex ">
               <TelegramLoginButton
                 dataOnauth={handleTelegramResponse}
@@ -61,6 +65,9 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="flex justify-center mt-[200px] ">
+          <About />
         </div>
       </div>
     </>
