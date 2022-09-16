@@ -6,7 +6,7 @@ import logo_text_white from "../assets/image/logo_text_white.png";
 
 const Footer = () => {
   return (
-    <div className="border-t border-neutral-700 mt-[250px] w-full h-full">
+    <div className="border-t border-neutral-700 mt-12 w-full h-full">
       <div className="my-8">
         <div className="flex flex-col w-full md:flex-row justify-between items-center my-8 md:my-4 gap-3 px-8">
           <div className="w-[200px] flex justify-center md:justify-start">
