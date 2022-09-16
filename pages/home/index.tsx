@@ -107,7 +107,7 @@ const Index = () => {
             </form>
           </div>
         </div>
-        <div className="px-6 md:px-12 h-full w-full ">
+        <div className="px-1 md:px-10 h-full w-full ">
           <Listing />
         </div>
         <div>
