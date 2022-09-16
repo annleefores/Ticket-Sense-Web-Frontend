@@ -17,6 +17,7 @@ const Footer = () => {
                     src={logo_text_white}
                     alt="Ticketsense"
                     layout="responsive"
+                    priority
                   />
                 </div>
               </a>

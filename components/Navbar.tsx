@@ -10,7 +10,13 @@ const Navbar = () => {
         <div>
           <Link href="/">
             <a className="flex flex-row items-center">
-              <Image src={logo} alt="Ticketsense" width={36} height={36} />
+              <Image
+                src={logo}
+                alt="Ticketsense"
+                width={36}
+                height={36}
+                priority
+              />
               <p className="ml-1 md:mb-1 text-lg md:text-2xl font-semibold">
                 ticket sense
               </p>
