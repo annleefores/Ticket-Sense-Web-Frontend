@@ -100,7 +100,7 @@ const Index = () => {
               <TheatreSelect />
               <DatePickerSelect />
               <div className="flex justify-center items-center">
-                <button className=" bg-[#00df9a] text-black rounded-md shadow-lg font-medium m-4 mt-8 p-3 w-[200px]">
+                <button className=" bg-emerald-500 text-black rounded-md shadow-lg font-medium m-4 mt-8 p-3 w-[200px]">
                   Enable Ticket Sense
                 </button>
               </div>

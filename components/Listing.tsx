@@ -70,8 +70,8 @@ const Listing = () => {
             onClick={() => filterType("all")}
             className={
               buttonValue === "all"
-                ? "border text-xs rounded bg-[#00df9a] border-[#00df9a] text-black p-1 px-4 m-2"
-                : "border text-xs rounded hover:border-[#00df9a] hover:text-[#00df9a]  p-1 px-4 m-2"
+                ? "border text-xs rounded bg-emerald-500 border-emerald-500 text-black p-1 px-4 m-2"
+                : "border text-xs rounded hover:border-emerald-500 hover:text-emerald-500  p-1 px-4 m-2"
             }
           >
             All
@@ -80,8 +80,8 @@ const Listing = () => {
             onClick={() => filterType("bms")}
             className={
               buttonValue === "bms"
-                ? "border text-xs rounded bg-[#00df9a] border-[#00df9a] text-black p-1 m-2"
-                : "border text-xs rounded hover:border-[#00df9a] hover:text-[#00df9a] p-1 m-2"
+                ? "border text-xs rounded bg-emerald-500 border-emerald-500 text-black p-1 m-2"
+                : "border text-xs rounded hover:border-emerald-500 hover:text-emerald-500 p-1 m-2"
             }
           >
             BookMyShow
@@ -90,8 +90,8 @@ const Listing = () => {
             onClick={() => filterType("tk")}
             className={
               buttonValue === "tk"
-                ? "border text-xs rounded bg-[#00df9a] border-[#00df9a] text-black p-1 m-2"
-                : "border text-xs rounded hover:border-[#00df9a] hover:text-[#00df9a] p-1 m-2"
+                ? "border text-xs rounded bg-emerald-500 border-[#00df9a] text-black p-1 m-2"
+                : "border text-xs rounded hover:border-emerald-500 hover:text-emerald-500 p-1 m-2"
             }
           >
             Ticket New
