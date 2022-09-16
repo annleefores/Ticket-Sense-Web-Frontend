@@ -8,7 +8,7 @@ import AboutElem from "./AboutElem";
 const About = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full h-full sm:gap-16 md:gap-20 gap-6 ">
+      <div className="grid grid-cols-1  md:grid-cols-3 w-full h-full sm:gap-16 md:gap-20 gap-6 ">
         <AboutElem
           image={booking}
           content={"Works with the theatres listed in"}

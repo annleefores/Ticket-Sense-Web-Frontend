@@ -7,6 +7,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const { user, setUserFunc } = useContextStore();
@@ -66,8 +67,11 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-[200px] ">
+        <div className="flex justify-center items-center mt-[200px] ">
           <About />
+        </div>
+        <div className="mt-[120px]">
+          <Footer />
         </div>
       </div>
     </>

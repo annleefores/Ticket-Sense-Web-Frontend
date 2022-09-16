@@ -12,6 +12,7 @@ import Navbar from "../../components/Navbar";
 import SlideControl from "../../components/SlideControl";
 import TheatreSelect from "../../components/TheatreSelect";
 import { useContextStore } from "../../context/AuthContext";
+import Footer from "../../components/Footer";
 
 dayjs.extend(customParseFormat);
 
@@ -106,8 +107,11 @@ const Index = () => {
             </form>
           </div>
         </div>
-        <div className="h-full w-full">
+        <div className="px-6 md:px-12 h-full w-full ">
           <Listing />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>
