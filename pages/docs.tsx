@@ -44,7 +44,8 @@ const Docs: NextPage = () => {
             <ul className="list-disc px-4 mt-1">
               <li>Select the booking website.</li>
               <li>
-                Enter the title of the film and select from the dropdown menu.
+                Enter the title of the film (check google for correct spelling)
+                and select from the dropdown menu.
               </li>
               <li>
                 Enter the theater&apos;s location and select from the dropdown
