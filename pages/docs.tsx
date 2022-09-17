@@ -2,13 +2,14 @@
 
 import type { NextPage } from "next";
 import React from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const Docs: NextPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col  justify-center p-4 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  md:max-w-[800px]">
+      <div className="flex flex-col  justify-center p-4 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  sm:max-w-[700px]">
         <h1 className="text-3xl font-bold mb-4">Ticket Sense</h1>
 
         <p className="text-lg font-bold mt-6">How to use Ticket Sense ?</p>
@@ -71,6 +72,9 @@ const Docs: NextPage = () => {
             </p>
           </li>
         </ul>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
