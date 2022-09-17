@@ -23,7 +23,7 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div className="text-sm md:text-base w-[200px] text-center">
+          <div className="text-sm text-neutral-400 md:text-base w-[200px] text-center">
             <p>
               Made by{" "}
               <span className="font-semibold">
@@ -33,7 +33,7 @@ const Footer = () => {
               </span>
             </p>
           </div>
-          <div className="w-[200px] flex justify-center md:justify-end text-sm md:text-base">
+          <div className="w-[200px] text-neutral-400 flex justify-center md:justify-end text-sm md:text-base">
             <Link href="https://github.com/AnnleeFores/Ticket-Sense-Web">
               <a>
                 <p>

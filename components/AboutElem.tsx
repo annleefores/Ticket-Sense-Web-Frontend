@@ -15,7 +15,7 @@ const AboutElem = ({
 }) => {
   return (
     <>
-      <div className="flex flex-col justify-center mb-12 gap-8 max-w-[350px] rounded-xl  ">
+      <div className="flex flex-col text-neutral-400 justify-center mb-12 gap-8 max-w-[350px] rounded-xl  ">
         <div className=" w-60 h-auto mx-auto mt-4 ">
           <Image
             src={image}
