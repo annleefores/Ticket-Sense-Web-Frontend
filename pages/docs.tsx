@@ -17,25 +17,25 @@ const Docs: NextPage = () => {
             <p className="font-semibold mt-6">Login with Telegram</p>
             <ul className="list-disc px-4 mt-1">
               <li>
-                Select country and enter you telegram account phone number.
+                Select country and enter you telegram account phone number and
+                click next.
               </li>
-              <li>Click next.</li>
               <li>
                 You will get a message on telegram from Telegram Service
                 Notification.
               </li>
               <li>Read it and click confirm.</li>
               <li>
-                Now go back to the web, if there&rsquo;s an accept page, accept
-                it after reading the conditions.
+                Now go back to the website, if there&rsquo;s an accept page,
+                accept it after reading the conditions.
               </li>
             </ul>
             <p className="mt-2">
               Now you have successfully logged in with telegram.
             </p>
             <p>
-              To logout, go to Telegram Service Notification on you telegram app
-              and click terminate session.
+              To logout, go to Telegram Service Notification on telegram and
+              click terminate session.
             </p>
             <p>To fully cancel this service click on Disconnect.</p>
           </li>
@@ -63,7 +63,7 @@ const Docs: NextPage = () => {
             </p>
             <p>
               When our system finds tickets going on sale we will notify you
-              through our ticket sense telegram bot.
+              through our telegram bot.
             </p>
             <p>
               To delete the notification, simply tap on the poster and click the
