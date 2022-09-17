@@ -50,8 +50,8 @@ const Home: NextPage = () => {
           </h1>
 
           <p className="md:text-2xl text-lg mt-2 text-neutral-400 p-2">
-            When you can't be there when movie tickets go on sale, we'll alert
-            you so you can buy first.
+            When you can&apos;t be there when movie tickets go on sale,
+            we&apos;ll alert you so you can buy first.
           </p>
 
           <div className="flex justify-center items-center w-full h-[50px] mt-[60px]">
