@@ -12,7 +12,6 @@ const Docs: NextPage = () => {
       <div className="flex flex-col  justify-center p-4 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  sm:max-w-[700px]">
         <h1 className="text-3xl font-bold mb-4">Ticket Sense</h1>
 
-        <p className="text-lg font-bold mt-6">How to use Ticket Sense ?</p>
         <ul>
           <li>
             <p className="font-semibold mt-6">Login with Telegram</p>
