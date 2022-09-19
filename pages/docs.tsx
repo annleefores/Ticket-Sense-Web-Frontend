@@ -24,10 +24,10 @@ const Docs: NextPage = () => {
                   Login with Telegram
                 </p>
               </div>
-              <div className="flex justify-center items-end hover:scale-110 transition delay-100 ease-in-out ">
+              <div className="flex justify-center  items-center hover:scale-110 transition delay-100 ease-in-out ">
                 <Link href="/">
                   <a>
-                    <div className="w-[24px] h-auto">
+                    <div className="w-[20px] md:w-[24px] h-auto">
                       <Image
                         src={telegram}
                         layout="responsive"
@@ -69,10 +69,10 @@ const Docs: NextPage = () => {
                   Using Ticket Sense
                 </p>
               </div>
-              <div className="flex justify-center items-end hover:scale-110 transition delay-100 ease-in-out ">
+              <div className="flex justify-center items-center hover:scale-110 transition delay-100 ease-in-out ">
                 <Link href="/home">
                   <a>
-                    <div className="w-[30px] h-auto">
+                    <div className="w-[26px] md:w-[30px] h-auto">
                       <Image
                         src={logo}
                         layout="responsive"
