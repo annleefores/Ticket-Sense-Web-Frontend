@@ -1,9 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import type { NextPage } from "next";
+import Image from "next/image";
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import logo from "../assets/image/logo.png";
+import telegram from "../assets/image/telegram.png";
+import Link from "next/link";
 
 const Docs: NextPage = () => {
   return (
@@ -14,9 +18,26 @@ const Docs: NextPage = () => {
 
         <ul>
           <li>
-            <p className="font-semibold text-lg mt-6 text-white">
-              Login with Telegram
-            </p>
+            <div className="flex flex-row mt-6 gap-2">
+              <div>
+                <p className="font-semibold text-lg  text-white">
+                  Login with Telegram
+                </p>
+              </div>
+              <div className="flex justify-center items-end hover:scale-110 transition delay-100 ease-in-out ">
+                <Link href="/">
+                  <a>
+                    <div className="w-[24px] h-auto">
+                      <Image
+                        src={telegram}
+                        layout="responsive"
+                        alt="ticket sense"
+                      />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            </div>
             <ul className="list-disc px-4 mt-1">
               <li>
                 Select country and enter you telegram account phone number and
@@ -42,9 +63,26 @@ const Docs: NextPage = () => {
             <p>To fully cancel this service click on Disconnect.</p>
           </li>
           <li>
-            <p className="font-semibold text-lg mt-6 text-white">
-              Using Ticket Sense
-            </p>
+            <div className="flex flex-row mt-6 gap-2">
+              <div>
+                <p className="font-semibold text-lg  text-white">
+                  Using Ticket Sense
+                </p>
+              </div>
+              <div className="flex justify-center items-end hover:scale-110 transition delay-100 ease-in-out ">
+                <Link href="/home">
+                  <a>
+                    <div className="w-[30px] h-auto">
+                      <Image
+                        src={logo}
+                        layout="responsive"
+                        alt="ticket sense"
+                      />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            </div>
             <ul className="list-disc px-4 mt-1">
               <li>Select the booking website.</li>
               <li>
