@@ -25,9 +25,11 @@ const Navbar = () => {
         </div>
         <div className="flex uppercase mr-5 md:mr-8">
           <Link href="/docs">
-            <p className="p-2 md:p-4 cursor-pointer text-sm md:text-lg font-semibold">
-              DOCS
-            </p>
+            <a>
+              <p className="p-2 md:p-4 cursor-pointer text-sm md:text-lg font-semibold">
+                DOCS
+              </p>
+            </a>
           </Link>
         </div>
       </div>

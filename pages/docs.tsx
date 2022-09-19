@@ -10,11 +10,13 @@ const Docs: NextPage = () => {
     <div>
       <Navbar />
       <div className="flex flex-col  justify-center p-4 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  sm:max-w-[700px]">
-        <h1 className="text-3xl font-bold mb-4">Ticket Sense</h1>
+        <h1 className="text-3xl font-bold mb-4 text-white">Ticket Sense</h1>
 
         <ul>
           <li>
-            <p className="font-semibold mt-6">Login with Telegram</p>
+            <p className="font-semibold text-lg mt-6 text-white">
+              Login with Telegram
+            </p>
             <ul className="list-disc px-4 mt-1">
               <li>
                 Select country and enter you telegram account phone number and
@@ -40,7 +42,9 @@ const Docs: NextPage = () => {
             <p>To fully cancel this service click on Disconnect.</p>
           </li>
           <li>
-            <p className="font-semibold mt-6">Using Ticket Sense</p>
+            <p className="font-semibold text-lg mt-6 text-white">
+              Using Ticket Sense
+            </p>
             <ul className="list-disc px-4 mt-1">
               <li>Select the booking website.</li>
               <li>
