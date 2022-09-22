@@ -32,6 +32,7 @@ const Docs: NextPage = () => {
                         src={telegram}
                         layout="responsive"
                         alt="ticket sense"
+                        priority
                       />
                     </div>
                   </a>
@@ -77,6 +78,7 @@ const Docs: NextPage = () => {
                         src={logo}
                         layout="responsive"
                         alt="ticket sense"
+                        priority
                       />
                     </div>
                   </a>
