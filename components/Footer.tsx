@@ -26,9 +26,9 @@ const Footer = () => {
           <div className="text-sm text-neutral-400 md:text-base w-[200px] text-center">
             <p>
               Made by{" "}
-              <span className="font-semibold">
+              <span>
                 <Link href="http://annleefores.com/">
-                  <a>@annleefores</a>
+                  <a>annleefores</a>
                 </Link>
               </span>
             </p>

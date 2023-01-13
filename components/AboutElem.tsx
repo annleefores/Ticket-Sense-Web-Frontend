@@ -30,7 +30,7 @@ const AboutElem = ({
             {addcontent1?.content ? (
               <>
                 {" "}
-                <span className="font-semibold ">
+                <span>
                   <Link href={addcontent1.link}>
                     <a target="_blank">{addcontent1.content}</a>
                   </Link>
@@ -39,8 +39,8 @@ const AboutElem = ({
             ) : null}
             {addcontent2?.content ? (
               <>
-                &{" "}
-                <span className="font-semibold">
+                and{" "}
+                <span>
                   <Link href={addcontent2.link}>
                     <a target="_blank">{addcontent2.content}</a>
                   </Link>

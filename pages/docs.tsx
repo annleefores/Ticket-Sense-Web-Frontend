@@ -14,11 +14,21 @@ const Docs: NextPage = () => {
     <div>
       <Navbar />
       <div className="flex flex-col  justify-center px-6 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  sm:max-w-[700px]">
+        <div className="mb-6">
+          <p className="font-semibold text-lg mb-4 px-4 text-white">About</p>
+          <p className="px-4">
+            The ultimate solution for movie-goers. With ticket sense, we'll
+            notify you the moment tickets for your favorite movies go on sale.
+            Never miss out on the chance to see the latest blockbuster or indie
+            hit again. Get first dibs on tickets before they sell out. Sign up
+            now and never miss a movie again.
+          </p>
+        </div>
         <ul>
           <li>
             <div className="flex flex-row mt-2 gap-2">
               <div>
-                <p className="font-semibold text-lg mb-4 px-2 text-white">
+                <p className="font-semibold text-md mb-4 px-4 text-white">
                   Login with Telegram
                 </p>
               </div>
@@ -52,7 +62,7 @@ const Docs: NextPage = () => {
           <li>
             <div className="flex flex-row mt-6 gap-2">
               <div>
-                <p className="font-semibold text-lg my-4 px-2 text-white">
+                <p className="font-semibold text-md my-4 px-4 text-white">
                   Using Ticket Sense
                 </p>
               </div>

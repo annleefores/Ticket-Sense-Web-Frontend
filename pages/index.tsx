@@ -44,18 +44,17 @@ const Home: NextPage = () => {
       <Navbar />
 
       <div className="text-white">
-      <div className="w-full h-full bg-red-500 text-center">
-            <p className="text-2xl font-semibold">Website under maintenance</p>
-          </div>
+        <div className="w-full h-full bg-red-500 text-center">
+          <p className="text-2xl font-semibold">Website under maintenance</p>
+        </div>
         <div className="max-w-[860px]  mt-[100px] w-full h-full mx-auto text-center flex flex-col justify-center ">
-          
           <h1 className="text-6xl text-emerald-500 mt-[45px] font-bold  flex justify-center p-2 md:text-[80px]  md:py-6">
-            Ticket Sense
+            ticket sense
           </h1>
 
           <p className="md:text-2xl text-lg mt-2 text-neutral-400 p-2">
             When you can&apos;t be there when movie tickets go on sale,
-            we&apos;ll alert you so you can buy first.
+            we&apos;ll alert you.
           </p>
 
           <div className="flex justify-center items-center w-full h-[50px] mt-[60px]">
