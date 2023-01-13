@@ -16,7 +16,7 @@ const Docs: NextPage = () => {
       <div className="flex flex-col  justify-center px-6 tracking-normal leading-relaxed  md:leading-loose mx-auto mt-[50px]  sm:max-w-[700px]">
         <div className="mb-6">
           <p className="font-semibold text-lg mb-4 px-2 text-white">About</p>
-          <p className="px-4">
+          <p className="px-2">
             The ultimate solution for movie-goers. With ticket sense, we'll
             notify you the moment tickets for your favorite movies go on sale.
             Never miss out on the chance to see the latest blockbuster or indie
