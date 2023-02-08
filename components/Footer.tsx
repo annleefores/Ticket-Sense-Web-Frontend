@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="w-[200px] text-neutral-400 flex justify-center md:justify-end text-sm md:text-base">
-            <Link href="https://github.com/AnnleeFores/Ticket-Sense-Web">
+            <Link href="https://github.com/annleefores/Ticket-Sense-Web">
               <a>
                 <p>
                   <BrandGithub />
