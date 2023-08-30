@@ -11,7 +11,7 @@ const About = () => {
       <div className="grid grid-cols-1  md:grid-cols-3 w-full h-full sm:gap-16 md:gap-20 gap-6 ">
         <AboutElem
           image={booking}
-          content={"Works with theatres listed in"}
+          content={"Works with theatres that are listed on"}
           addcontent1={{
             link: "https://in.bookmyshow.com/",
             content: "BookMyShow",
@@ -24,12 +24,12 @@ const About = () => {
         <AboutElem
           image={time}
           content={
-            "Constantly tracks various ticket booking services for the release of tickets."
+            "Constantly monitors ticket booking services for ticket releases"
           }
         />
         <AboutElem
           image={notify}
-          content={"Alerts you as soon as bookings open through"}
+          content={"Get alerts as soon as bookings open through"}
           addcontent1={{
             link: "https://telegram.org/",
             content: "Telegram",
